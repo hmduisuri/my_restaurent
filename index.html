@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Isuri Backers</title>
+        <link rel="shortcut icon" type="image/jpg" href="images/favicon.png"/>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css" rel="stylesheet"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Exo+2&family=Lobster&family=Lemonada&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="css/style.css">
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+
+    </head>
+    <body>
+        <header id="header">
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#special">Special</a></li>
+                        <li><a href="#about">About</a></li>
+                            <li><a href="#dish">Dish</a></li>
+                            <li><a href="#testimonial">Testimonial</a></li>
+                                <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class ="fas fa-hamburger"></div> 
+            <a href="#" class="logo"><img src="images/logo.png"></a>
+        </header>
+        <!-- header section end -->
+
+        <!-- home section start -->
+        <section id="home" class="container-fluid">
+            <div class="row min-vh-100 align-items-center">
+                <div class="col-md-8 ml-md-5 text-md-left text-center content">    
+                    <h1>Food that you can't resist</h1>
+                    <h2>Enjoy the marvelous taste</h2>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                         when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+                         It has survived not only five centuries, but also the leap into electronic typesetting, 
+                         remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset 
+                         sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like 
+                         Aldus PageMaker including versions of Lorem Ipsum.</p>
+                    <a href="special"><button>Get Started</button></a>
+                </div>
+
+                <!-- video content -->
+                    <div class="video-container">
+                        <video src="images/vid1.mp4" autoplay loop class="vid vid1"></video> 
+                        <video src="images/vid2.mp4" autoplay loop class="vid vid2"></video>
+                        <video src="images/vid3.mp4" autoplay loop class="vid vid3"></video>
+
+                    </div>
+                    <div class="controls">
+                        <div class="dots dot1"></div>
+                        <div class="dots dot2"></div>
+                        <div class="dots dot3"></div>
+
+                    </div>
+                <!-- video content end -->
+
+            </div>
+        </section>
+        <!-- home section end -->
+
+        <!-- special card section start -->
+        <section id="special" class="container-fluid">
+            <div class="heading text-center">
+                <h1>Our <span>special</span></h1>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            </div>
+
+            <div class="card-container">
+                <div class="card">
+                    <img src="images/card1.jpg" alt="">
+                    <h3>noodle soup</h3>
+                    <div class="spc-btn-style">
+                        <a href="#special"><button data-toggle="modal" data-target="#spc-model">read more</button></a>
+                    </div>
+                    <div style="display: none;">
+                        <p>It is a long established fact that a reader will be distracted by the readable content of a page when 
+                            looking at its layout...</p>
+                            <h4>¥ 800</h4>
+                            <h6>1</h6>
+                        </div>
+                    </div>
+                <div class="card">
+                    <img src="images/card2.jpg" alt="">
+                    <h3>Wonderful Marriage of Chicken and Ramen!</h3>
+                    <div class="spc-btn-style">
+                        <a href="#special"><button data-toggle="modal" data-target="#spc-model">read more</button></a>
+                    </div>
+                    <div style="display: none;">
+                        <p>It is a long established fact that a reader will be distracted by the readable content of a page when 
+                            looking at its layout. </p>
+                            <h4>¥ 1000</h4>
+                            <h6>2</h6>
+                        </div>
+                    </div>
+                <div class="card">
+                    <img src="images/card3.jpg" alt="">
+                    <h3>Sushi Sho</h3>
+                    <div class="spc-btn-style">
+                        <a href="#special"><button data-toggle="modal" data-target="#spc-model">read more</button></a>
+                    </div>
+                    <div style="display: none;">
+                        <p>It is a long established fact that a reader will be distracted by the readable</p>
+                        <h4>¥ 900</h4>
+                        <h6>3</h6>
+                    </div>
+                </div>
+            </div>
+            <div id="spc-model" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <!-- <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Modal Header</h4>
+                        </div> -->
+                        <div class="modal-body mod-body">
+                                <div class="img-container">
+                                    <img src="" alt="">
+                                </div>
+                                <div class="info-container">
+                                    <h6 style="display: none;"></h6>
+                                    <h2></h2>
+                                    <h4>4.5***** (17 ratings)</h4>
+                                    <hr>
+                                    <p></p>
+                                    <h3></h3>
+                                    <button class="btnorder">Order now</button>
+                                </div>
+                                <div class="cus-review">
+                                    <h2>Write your review</h2>
+                                    <input id="reviewInput" style="text-transform: none;" type="text" placeholder="Write something about this dish....">
+                                    <i class="far fa-paper-plane ico-review"></i>
+                                    <div id="myalert">
+                                    <!-- alert goes here -->
+                                    </div>
+                                </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button id="model-button" type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- special card section end -->
+
+        <!-- about section start -->
+            <section id="about" class="container">
+                <div class="heading text-center">
+                    <h1><span>About</span> us</h1>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                </div>
+    
+                <div class="abt-main content">
+                <!-- <div class="row min-vh-100">
+                    <div class="col-md-6 text-center text-md-left align-self-center content"> -->
+                        <div>
+                            <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.</p>
+                            <p>All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.</p>
+                            <a href="#"><button>Learn more</button></a>
+                        </div>
+                    <!-- </div> -->
+                    <div style="text-align: center;">
+                        <img src="images/pic.png" alt="">
+                    </div>
+                <!-- </div> -->
+</div>
+                
+
+            </section>
+        <!-- about section end -->
+
+<!-- dish section starts  -->
+
+<section id="dish" class="container">
+
+    <div class="heading text-center">
+        <h1>our <span>dishes</span></h1>
+    </div>
+
+    <div class="box-container">
+
+        <div class="box">
+            <img src="images/dish1.jpg" alt="">
+            <div class="info">
+                <h3>Sushi</h3>
+                <p>If you’re looking for tasty and inexpensive Japanese cuisine, this sushi is one of the most popular conveyor belt.</p>
+                <a href="#"><button>view</button></a>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="images/dish2.jpg" alt="">
+            <div class="info">
+                <h3>dish2</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam, nihil.</p>
+                <a href="#"><button>view</button></a>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="images/dish3.jpg" alt="">
+            <div class="info">
+                <h3>dish3</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam, nihil.</p>
+                <a href="#"><button>view</button></a>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="images/dish4.jpg" alt="">
+            <div class="info">
+                <h3>dish4</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam, nihil.</p>
+                <a href="#"><button>view</button></a>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="images/dish5.jpg" alt="">
+            <div class="info">
+                <h3>dish5</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam, nihil.</p>
+                <a href="#"><button>view</button></a>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="images/dish6.jpg" alt="">
+            <div class="info">
+                <h3>dish6</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam, nihil.</p>
+                <a href="#"><button>view</button></a>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- dish section ends  -->
+
+
+<!-- testimonial section start -->
+
+<section id="testimonial">
+    <div class="heading text-center">
+        <h1>Happy <span>customer</span></h1>
+    </div>
+<div class="testi-all">
+    <div class="testi-container">
+            <div class= "testi-card">
+                <div class="testi-info">
+                    <div class="testi-text-area">
+                        <p>
+                         All I can say is Thank you! You have been absolutely amazing. · OMG! I am blown away .
+                        </p>
+                        <h2><strong>- Isuri -</strong></h2>
+                        <p>
+                            <i class="fa fa-star star-clr"></i>
+                            <i class="fa fa-star star-clr"></i>
+                            <i class="fa fa-star star-clr"></i>
+                            <i class="fa fa-star star-clr"></i>
+                            <i class="fa fa-star star-clr"></i>
+                           </p>
+                    </div>
+                    <div class="testi-img-area">
+                        <img src="images/cus1.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class= "testi-card">
+                <div class="testi-info">
+                    <div class="testi-text-area">
+                        <p>
+                         All I can say is Thank you! You have been absolutely amazing. · OMG! I am blown away .
+                        </p>
+                        <h2><strong>- Garry Walt -</strong></h2>
+                        <p>
+                            <i class="fa fa-star star-clr"></i>
+                            <i class="fa fa-star star-clr"></i>
+                            <i class="fa fa-star star-clr"></i>
+                            <i class="fa fa-star star-clr"></i>
+                            <i class="fa fa-star"></i>
+                           </p>
+                    </div>
+                    <div class="testi-img-area">
+                        <img src="images/cus2.PNG" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class= "testi-card">
+                <div class="testi-info">
+                    <div class="testi-text-area">
+                        <p>
+                         All I can say is Thank you! You have been absolutely amazing. · OMG! I am blown away .
+                        </p>
+                        <h2><strong>- Magie Fread -</strong></h2>
+                        <p>
+                            <i class="fa fa-star star-clr"></i>
+                            <i class="fa fa-star star-clr"></i>
+                            <i class="fa fa-star star-clr"></i>
+                            <i class="fa fa-star star-clr"></i>
+                            <i class="fa fa-star"></i>
+                           </p>
+                    </div>
+                    <div class="testi-img-area">
+                        <img src="images/cus3.PNG" alt="">
+                    </div>
+                </div>
+            </div>
+    </div>
+    <div class="testi-controls">
+        <div class="sqrs sqr1"></div>
+        <div class="sqrs sqr2"></div>
+        <div class="sqrs sqr3"></div>
+    </div>
+</div>
+    
+
+</section>
+<!-- testimonial section end -->
+
+
+<!-- contact section start -->
+    <section id="contact" class="container-fluid">
+
+        <div class="heading text-center">
+            <h1><span>contact</span> us</h1>
+        </div>
+
+        <div class="row justify-content-center">
+
+            <form action="https://postmail.invotes.com/send" method="post" id="email_form" class="col-md-7">
+
+                <div class="inputBox">
+                    <input id = "temp_sub" type="text" name="" required>
+                    <h3>full name</h3>
+                    
+                    <input id="subject" type="hidden" name="subject" value = "" required>
+                </div>
+
+                <div class="inputBox">
+                    <input type="email" name="extra_email" required>
+                    <h3>e-mail</h3>
+                </div>
+
+                <div class="inputBox">
+                    <textarea required name="text" id="" cols="30" rows="10"></textarea>
+                    <h3>message</h3>
+                </div>
+                <input type="hidden" name="access_token" value="bulcgaldsks36fh5kym47iv6" />
+                <input type="hidden" name="success_url"  value="http://127.0.0.1:5500/index.html#home" />
+                <input type="hidden" name="error_url" value="https://www.google.com" />
+
+                <input id="submit_form" type="submit" value="Send"/>
+
+            </form>
+
+        </div>
+
+    </section>
+<!-- contact section end -->
+
+<!-- footer section starts  -->
+
+<section id="footer" class="container-fluid">
+
+    <div class="row align-items-center">
+    
+    <div class="col-md-4 brand">
+    
+    <a href="#" class="logo"><img src="images/logo.png" alt=""></a>
+    
+    <div class="icons">
+        <a href="#" class="fab fa-facebook-square"></a>
+        <a href="#" class="fab fa-twitter-square"></a>
+        <a href="#" class="fab fa-instagram-square"></a>
+        <a href="#" class="fab fa-pinterest-square"></a>
+    </div>
+    
+    </div>
+    
+    <div class="col-md-4 footer-links">
+    <h3>links:</h3>
+    <a href="#home">home</a>
+    <a href="#special">special</a>
+    <a href="#about">about</a>
+    <a href="#dish">dish</a>
+    <a href="#contact">contact</a>
+    </div>
+    
+    <div class="col-md-4 text-center text-md-left letter">
+    <h2>newsletter</h2>
+    <input type="text"><br>
+    <input type="submit" value="subscribe">
+    </div>
+    
+    </div>
+    
+    <h1>&copy; copyright @ 2021 by <span>ms. web designer</span></h1>
+    
+    </section>
+    
+    <!-- footer section ends  -->
+<script src="./js/script.js"></script>
+        <!-- <script src=""> -->
+    </body>
+</html>
