@@ -832,12 +832,22 @@ width: 100%;
     width: 100%;
     background-color: #70a401;
     /* opacity: .8; */
-    padding: 1rem;
+    padding: 0.7rem;
     border-radius: 0.6rem;
     color: black;
     font-size: 2.5rem;
     text-align: center;
     margin: 1rem auto;
+}
+
+#spc-model .cus-review .enable_alert{ 
+    opacity: 1; 
+    cursor: pointer;
+}
+
+#spc-model .cus-review .disable_alert{ 
+    opacity: 0.6; 
+    cursor: not-allowed;
 }
 
 @keyframes mymove {

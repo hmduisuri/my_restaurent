@@ -57,19 +57,28 @@ $(document).ready(function(){
         });  
     }
 // change event of review input field
+$("#reviewInput").blur(function(){
+    console.log("on blur");
+});
+
 $("#reviewInput").change(function(){
-    if(($(this).val())){
+    var review = $(this).val();
+    
+    if(($.trim(review).length !==0) && ($.trim(review).length > 5)){
         debugger;
-        $(this).addClass('enable_alert');
+        $(".ico-review").removeClass('disable_alert').addClass('enable_alert');
     }else{
-        $(this).addClass('disable_alert');      
+        debugger;
+        $(".ico-review").removeClass('enable_alert').addClass('disable_alert');      
     }
 });
 
 // create click event to review icon
     $(".ico-review").click(function() {
+        var review = $(this).val();
+
         var cus_review =  $("#reviewInput").val();
-        if(cus_review){
+        if($.trim(cus_review).length !==0){
             var product_review = "";
             product_review = {
             pk_review_id: Math.floor(Math.random() * 100),
@@ -89,7 +98,7 @@ $("#reviewInput").change(function(){
                 //   setTimeout(function() {
                     $("#myalert").addClass('alert').html("Thank you for your feedback!")
                     $("#myalert").fadeIn(1000);
-                    $("#myalert").fadeOut(2000);
+                    $("#myalert").fadeOut(2500);
     
                     
                     // $('.alert').fadeOut('slow');}, 1000
