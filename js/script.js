@@ -34,9 +34,8 @@ $(document).ready(function(){
         }
     });
 
+    // model creation
     function addlisners(){
-      // model creation
-
       $(".card-container .card button").click(function(){
         var image,heading,detail,price,p_id = "";
         image = $(this).closest('.card').find('img')[0].currentSrc;
@@ -52,33 +51,24 @@ $(document).ready(function(){
         $(".info-container").find("h3").html(price)
         $(".info-container").find("h6").html(p_id)
 
-
-
-        });  
+        getReviews();
+        });
     }
 // change event of review input field
-$("#reviewInput").blur(function(){
-    console.log("on blur");
-});
-
-$("#reviewInput").change(function(){
-    var review = $(this).val();
-    
-    if(($.trim(review).length !==0) && ($.trim(review).length > 5)){
-        debugger;
-        $(".ico-review").removeClass('disable_alert').addClass('enable_alert');
-    }else{
-        debugger;
-        $(".ico-review").removeClass('enable_alert').addClass('disable_alert');      
-    }
-});
+    $("#reviewInput").change(function(){
+        var review = $(this).val();
+        
+        if(($.trim(review).length !==0) && ($.trim(review).length > 3)){
+            $(".ico-review").removeClass('disable_alert').addClass('enable_alert');
+        }else{
+            $(".ico-review").removeClass('enable_alert').addClass('disable_alert');      
+        }
+    });
 
 // create click event to review icon
     $(".ico-review").click(function() {
-        var review = $(this).val();
-
         var cus_review =  $("#reviewInput").val();
-        if($.trim(cus_review).length !==0){
+        if(($.trim(cus_review).length !==0) && ($.trim(cus_review).length > 3)){
             var product_review = "";
             product_review = {
             pk_review_id: Math.floor(Math.random() * 100),
@@ -92,17 +82,12 @@ $("#reviewInput").change(function(){
               data: JSON.stringify(product_review),
               dataType: "text",
               success:function(){
+                getReviews();
                   console.log('Data inserted successfully');
-                  $("#reviewInput").val("");
-                //   $(".alert").css("display","block")
-                //   setTimeout(function() {
+                    $("#reviewInput").val("");
                     $("#myalert").addClass('alert').html("Thank you for your feedback!")
                     $("#myalert").fadeIn(1000);
-                    $("#myalert").fadeOut(2500);
-    
-                    
-                    // $('.alert').fadeOut('slow');}, 1000
-                //   );
+                    $("#myalert").fadeOut(4000);
               },
               error:function(error){
                   console.log(error);
@@ -110,13 +95,46 @@ $("#reviewInput").change(function(){
           });
             
         }else{
-            $(this).prop("disabled", true)
+            $(".ico-review").removeClass('enable_alert').addClass('disable_alert'); 
         }
 
-
-
     });
-    
+//calculate reviews
+function filterReviews(data) {
+        var g_numberOfreviews = 0;
+        $.each(data,function(count){
+            debugger;
+           var ncount =  data[count].fk_product_id;
+           
+           var selected_product_id = parseInt($(".info-container h6").html());
+           if(selected_product_id == ncount){
+               g_numberOfreviews +=1;
+            }
+            
+        });
+        // console.log(ncount);
+
+        console.log(g_numberOfreviews);
+        $("#spc-model .info-container #ratingCount h4").html(g_numberOfreviews + " ratings");
+    }
+
+   // get reviews count
+   function getReviews(){
+        $.ajax({
+            url: restdb + "product_review.json",
+            type: "GET",
+            dataType: "JSON",
+            success: function(data){
+                console.log(data);
+                filterReviews(data);
+            },
+            error: function(error){
+                console.log(error);
+            }
+        });
+   }
+
+
 
 // special card creation
 try {

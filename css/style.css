@@ -830,12 +830,12 @@ width: 100%;
 }
 #spc-model .cus-review .alert{
     width: 100%;
-    background-color: #70a401;
+    background-color: #a4d639;
     /* opacity: .8; */
     padding: 0.7rem;
     border-radius: 0.6rem;
     color: black;
-    font-size: 2.5rem;
+    font-size: 2.3rem;
     text-align: center;
     margin: 1rem auto;
 }
