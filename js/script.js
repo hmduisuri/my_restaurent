@@ -1,4 +1,5 @@
 $(document).ready(function(){
+    $('body').bind('touchstart', function() {});
     let restdb = "https://isuri-restaurent-default-rtdb.firebaseio.com/";
     $(".fa-hamburger").click(function(){
         $(this).toggleClass('fa-times');
